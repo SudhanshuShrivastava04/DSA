@@ -10,7 +10,7 @@ public class nextPermutation {
             return;
         // find k
         for (int i = n - 1; i > 0; i--) {
-            if (nums[i] < nums[i - 1])
+            if (nums[i] <= nums[i - 1])
                 k--;
             else
                 break;
@@ -45,7 +45,7 @@ public class nextPermutation {
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{4,1,3,2};
+        int[] nums = new int[]{5,1,1};
         findNextPermutation(nums);
         System.out.println(Arrays.toString(nums));
     }
