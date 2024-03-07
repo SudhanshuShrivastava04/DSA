@@ -1,8 +1,10 @@
 public class RemoveCharacter {
     public static void main(String[] args) {
         String inputString = "abcabcabc";
-        String resultString = removeChar(inputString,'a');
-        System.out.println(resultString);
+        String resultString01 = removeChar(inputString,'a');
+        String resultString02 = removeCharUsingReplace(inputString, 'b');
+        System.out.println(resultString01);
+        System.out.println(resultString02);
     }
 
     public static String removeChar(String str, char charToRemove){
@@ -14,5 +16,10 @@ public class RemoveCharacter {
         }
         return result.toString();
     }
+
+    public static String removeCharUsingReplace(String str, char charToRemove){
+        return str.replace(String.valueOf(charToRemove), "");
+    }
+
 
 }
