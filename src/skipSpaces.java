@@ -14,6 +14,7 @@ public class skipSpaces {
         } else {
             return up.charAt(0) + skip(up.substring(1));
         }
+
     }
 
 }
