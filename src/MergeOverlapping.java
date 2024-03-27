@@ -15,7 +15,7 @@ public class MergeOverlapping {
         for(int i=1; i<intervals.length; i++){
             if(currInterval[1] >= intervals[i][0]){
                 currInterval[1] = Math.max(currInterval[1],intervals[i][1]);
-            }else{
+            } else {
                 result.add(currInterval);
                 currInterval = intervals[i];
             }
