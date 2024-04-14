@@ -24,6 +24,13 @@ public class LinkedList {
         System.out.println("Length of List 1 : " + LengthofLinkedList(head1));
         System.out.println("Length of List 2 : " + LengthofLinkedList(head2));
         System.out.println("Index of 9 in list 2 : " + searchNode(head2,9));
+
+        head2 = removeHead(head2);
+        while(head2 != null){
+            System.out.print(head2.data + "->");
+            head2 = head2.next;
+        }
+
     }
 
     public static class Node {
@@ -40,6 +47,12 @@ public class LinkedList {
             this.next = next;
         }
 
+    }
+
+    public static Node removeHead(Node head){
+        if(head == null) return head;
+        head = head.next;
+        return head;
     }
 
     public static int LengthofLinkedList(Node head){
